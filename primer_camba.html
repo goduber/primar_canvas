@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="es-es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Primer Camba</title>
+</head>
+<body>
+
+    <canvas id="myCanvas" width="600" height="400" style="border:1px solid #d3d3d3;">
+        
+    </canvas>
+
+    <script>
+        var pantalla = document.getElementById("myCanvas");
+        var pincel = pantalla.getContext("2d");
+
+        const pi = 3.14159265359
+
+        pincel.fillStyle = "#a3a3c2";
+        pincel.fillRect(0, 0, 600, 400);
+
+        pincel.fillStyle = "green";
+        pincel.fillRect(0, 0, 200, 400);
+
+        pincel.fillStyle = "white";
+        pincel.fillRect(200, 0, 200, 400);
+
+        pincel.fillStyle = "red";
+        pincel.fillRect(400, 0, 200, 400);
+
+        pincel.fillStyle = "yellow";
+        pincel.beginPath();
+        pincel.moveTo(300, 200);
+        pincel.lineTo(200, 400);
+        pincel.lineTo(400, 400);
+        pincel.fill();
+
+        pincel.fillStyle = "blue";
+        pincel.beginPath();
+        pincel.arc(300,200,50,0,2*pi);
+        pincel.fill();
+    </script>
+</body>
+</html>
